@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "estate_title": "Modern Office Building",
+    "segment_name": "Commercial",
+    "description": "A sleek and contemporary office building equipped with state-of-the-art facilities, ideal for businesses looking for a professional workspace.",
+    "price": "$5,000,000",
+    "status": "sale",
+    "area": "10,000 sq ft",
+    "location": "Downtown Business District",
+    "facilities": ["Meeting rooms", "Cafeteria", "Parking garage"],
+    "image": "https://example.com/entertainment_venue_image.jpg"
+  },
+  {
+    "id": 2,
+    "estate_title": "Prime Retail Space",
+    "segment_name": "Commercial",
+    "description": "Highly visible retail space located in a bustling shopping district, perfect for attracting customers and growing your business.",
+    "price": "$10,000/month",
+    "status": "rent",
+    "area": "2,500 sq ft",
+    "location": "Main Street",
+    "facilities": ["Storefront windows", "Storage room", "Security system"],
+    "image": "https://example.com/entertainment_venue_image.jpg"
+  },
+  {
+    "id": 3,
+    "estate_title": "Industrial Warehouse Complex",
+    "segment_name": "Commercial",
+    "description": "Spacious warehouse facility with multiple units, suitable for storage, distribution, or manufacturing operations.",
+    "price": "$3,500,000",
+    "status": "sale",
+    "area": "50,000 sq ft",
+    "location": "Industrial Park",
+    "facilities": ["Loading docks", "Office space", "Forklift access"],
+    "image": "https://example.com/entertainment_venue_image.jpg"
+  },
+  {
+    "id": 4,
+    "estate_title": "Premium Restaurant Space",
+    "segment_name": "Commercial",
+    "description": "Turnkey restaurant space with a fully equipped kitchen, elegant dining area, and outdoor patio, ready for a new culinary venture.",
+    "price": "$15,000/month",
+    "status": "rent",
+    "area": "3,000 sq ft",
+    "location": "City Center",
+    "facilities": ["Commercial kitchen", "Outdoor seating", "Bar area"],
+    "image": "https://example.com/entertainment_venue_image.jpg"
+  },
+  {
+    "id": 5,
+    "estate_title": "Entertainment Venue",
+    "segment_name": "Commercial",
+    "description": "Versatile entertainment venue suitable for concerts, performances, and private events, featuring a spacious stage, bar area, and VIP lounges.",
+    "price": "$20,000/day",
+    "status": "rent",
+    "area": "5,000 sq ft",
+    "location": "Arts District",
+    "facilities": ["Stage", "Sound system", "Lighting equipment"],
+    "image": "https://example.com/entertainment_venue_image.jpg"
+  },
+  {
+    "id": 6,
+    "estate_title": "Luxury Office Tower",
+    "segment_name": "Commercial",
+    "description": "Iconic office tower offering prestigious corporate offices with panoramic city views, premium amenities, and concierge services.",
+    "price": "$100,000/month",
+    "status": "rent",
+    "area": "20,000 sq ft",
+    "location": "Financial District",
+    "facilities": ["Executive suites", "Fitness center", "Conference rooms"],
+    "image": "https://example.com/entertainment_venue_image.jpg"
+  }
+]
