@@ -9,6 +9,10 @@ const Nav = () => {
       <li>
       <NavLink to='/login'>Login</NavLink>
       </li>
+      <li>
+      <NavLink to='/signup'>Sign up</NavLink>
+      </li>
+
     </>
   );
   return (
@@ -34,19 +38,18 @@ const Nav = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 z-10"
             >
               {navLinks}
             </ul>
           </div>
-          <a className="btn btn-ghost text-3xl">Dream Sites</a>
+          <a className="btn btn-ghost text-md md:text-xl lg:text-3xl">Dream Sites</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>
         </div>
         <div className="navbar-end space-x-4 font-semibold">
-          <Link className="">Sign up</Link>
-          <Link className="">Sign in</Link>
+ 
           <Link className="btn">List a Property </Link>
         </div>
       </div>
