@@ -9,12 +9,12 @@ const OurService = () => {
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-5 lg:gap-10">
-        <div className="flex flex-col space-y-4 text-center justify-center items-center hover:bg-green-100 lg:p-4 rounded-md hover:scale-110">
+        <div className="flex flex-col space-y-4 text-center justify-center items-center hover:bg-green-100 lg:p-4 rounded-md hover:scale-110 hover:duration-500">
           <div className="text-5xl text-green-600">
             <SlLocationPin />
           </div>
           <div>
-          <h1 className=" md:text-lg lg:text-xl font-semibold">Find places anywhere in the world</h1>
+          <h1 className=" md:text-lg lg:text-xl font-semibold text-green-500">Find places anywhere in the world</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas,
             veritatis.
@@ -22,12 +22,12 @@ const OurService = () => {
           </div>
         </div>
         <div>
-        <div className="flex flex-col space-y-4 text-center justify-center items-center hover:bg-green-100 lg:p-4 rounded-md hover:scale-110">
+        <div className="flex flex-col space-y-4 text-center justify-center items-center hover:bg-green-100 lg:p-4 rounded-md hover:scale-110 hover:duration-500">
           <div className="text-5xl text-green-600">
           <FaUsers />
           </div>
           <div>
-          <h1 className=" md:text-lg lg:text-xl font-semibold">Find places anywhere in the world</h1>
+          <h1 className=" md:text-lg lg:text-xl font-semibold text-green-500">Find places anywhere in the world</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas,
             veritatis.
@@ -37,13 +37,13 @@ const OurService = () => {
 
         </div>
         <div>
-        <div className="flex flex-col space-y-4 text-center justify-center items-center hover:bg-green-100 lg:p-4 rounded-md hover:scale-110">
+        <div className="flex flex-col space-y-4 text-center justify-center items-center hover:bg-green-100 lg:p-4 rounded-md hover:scale-110 hover:duration-500">
           <div className="text-5xl text-green-600">
           <IoHome/>
 
           </div>
           <div>
-          <h1 className=" md:text-lg lg:text-xl font-semibold">Find places anywhere in the world</h1>
+          <h1 className=" md:text-lg lg:text-xl font-semibold text-green-500">Find places anywhere in the world</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas,
             veritatis.
@@ -52,13 +52,13 @@ const OurService = () => {
         </div>
         </div>
         <div>
-        <div className="flex flex-col space-y-4 text-center justify-center items-center hover:bg-green-100 lg:p-4 rounded-md hover:scale-110">
+        <div className="flex flex-col space-y-4 text-center justify-center items-center hover:bg-green-100 lg:p-4 rounded-md hover:scale-110 hover:duration-500">
           <div className="text-5xl text-green-600">
           <IoCloudUploadOutline />
 
           </div>
           <div>
-          <h1 className=" md:text-lg lg:text-xl font-semibold">Find places anywhere in the world</h1>
+          <h1 className=" md:text-lg lg:text-xl font-semibold text-green-500">Find places anywhere in the world</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas,
             veritatis.
