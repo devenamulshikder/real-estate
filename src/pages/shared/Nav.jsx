@@ -43,7 +43,7 @@ const Nav = () => {
               {navLinks}
             </ul>
           </div>
-          <a className="btn btn-ghost text-md md:text-xl lg:text-3xl">Dream Sites</a>
+          <a className="btn btn-ghost text-md md:text-xl lg:text-3xl font-bold">Dream <span className="text-[#38b469]">Sites</span></a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>
