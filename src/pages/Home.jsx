@@ -3,6 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import Banner from "../components/Banner";
 import Estate from "../components/Estate";
 import OurService from "../components/OurService";
+import OurAgent from "../components/OurAgent";
 
 const Home = () => {
   const data = useLoaderData();
@@ -23,6 +24,7 @@ const Home = () => {
           ))}
         </div>
       </div>
+      <OurAgent/>
     </div>
   );
 };
