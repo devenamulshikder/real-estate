@@ -10,6 +10,10 @@ const OurAgent = () => {
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+   
+
+    
+
         <div className=" flex flex-col justify-center items-center gap-2">
           {/* image */}
 
@@ -30,30 +34,29 @@ const OurAgent = () => {
             <MdOutlineStarPurple500 />
           </div>
           <div className="flex gap-1">
-            <div className="border rounded-full p-2">
+            <div className="border rounded-full p-2 text-[#38b469] hover:bg-green-200">
               <a href="">
                 {" "}
                 <MdOutlineEmail />
               </a>
             </div>
-            <div className="border rounded-full p-2">
+            <div className="border rounded-full p-2 text-blue-900 hover:bg-blue-400">
               <a href="">
                 <TiSocialFacebook />
               </a>
             </div>
-            <div className="border rounded-full p-2">
+            <div className="border rounded-full p-2 text-blue-500 hover:bg-blue-200">
               <a href="">
                 <CiTwitter />
               </a>
             </div>
-            <div className="border rounded-full p-2">
+            <div className="border rounded-full p-2 text-orange-700 hover:bg-orange-200">
               <a href="">
                 <TiSocialGooglePlus />
               </a>
             </div>
           </div>
         </div>
-
         <div className=" flex flex-col justify-center items-center gap-2">
           {/* image */}
 
@@ -74,30 +77,29 @@ const OurAgent = () => {
             <MdOutlineStarPurple500 />
           </div>
           <div className="flex gap-1">
-            <div className="border rounded-full p-2">
+            <div className="border rounded-full p-2 text-[#38b469] hover:bg-green-200">
               <a href="">
                 {" "}
                 <MdOutlineEmail />
               </a>
             </div>
-            <div className="border rounded-full p-2">
+            <div className="border rounded-full p-2 text-blue-900 hover:bg-blue-400">
               <a href="">
                 <TiSocialFacebook />
               </a>
             </div>
-            <div className="border rounded-full p-2">
+            <div className="border rounded-full p-2 text-blue-500 hover:bg-blue-200">
               <a href="">
                 <CiTwitter />
               </a>
             </div>
-            <div className="border rounded-full p-2">
+            <div className="border rounded-full p-2 text-orange-700 hover:bg-orange-200">
               <a href="">
                 <TiSocialGooglePlus />
               </a>
             </div>
           </div>
         </div>
-
         <div className=" flex flex-col justify-center items-center gap-2">
           {/* image */}
 
@@ -118,30 +120,29 @@ const OurAgent = () => {
             <MdOutlineStarPurple500 />
           </div>
           <div className="flex gap-1">
-            <div className="border rounded-full p-2">
+            <div className="border rounded-full p-2 text-[#38b469] hover:bg-green-200">
               <a href="">
                 {" "}
                 <MdOutlineEmail />
               </a>
             </div>
-            <div className="border rounded-full p-2">
+            <div className="border rounded-full p-2 text-blue-900 hover:bg-blue-400">
               <a href="">
                 <TiSocialFacebook />
               </a>
             </div>
-            <div className="border rounded-full p-2">
+            <div className="border rounded-full p-2 text-blue-500 hover:bg-blue-200">
               <a href="">
                 <CiTwitter />
               </a>
             </div>
-            <div className="border rounded-full p-2">
+            <div className="border rounded-full p-2 text-orange-700 hover:bg-orange-200">
               <a href="">
                 <TiSocialGooglePlus />
               </a>
             </div>
           </div>
         </div>
-
         <div className=" flex flex-col justify-center items-center gap-2">
           {/* image */}
 
@@ -162,29 +163,31 @@ const OurAgent = () => {
             <MdOutlineStarPurple500 />
           </div>
           <div className="flex gap-1">
-            <div className="border rounded-full p-2">
+            <div className="border rounded-full p-2 text-[#38b469] hover:bg-green-200">
               <a href="">
                 {" "}
                 <MdOutlineEmail />
               </a>
             </div>
-            <div className="border rounded-full p-2">
+            <div className="border rounded-full p-2 text-blue-900 hover:bg-blue-400">
               <a href="">
                 <TiSocialFacebook />
               </a>
             </div>
-            <div className="border rounded-full p-2">
+            <div className="border rounded-full p-2 text-blue-500 hover:bg-blue-200">
               <a href="">
                 <CiTwitter />
               </a>
             </div>
-            <div className="border rounded-full p-2">
+            <div className="border rounded-full p-2 text-orange-700 hover:bg-orange-200">
               <a href="">
                 <TiSocialGooglePlus />
               </a>
             </div>
           </div>
         </div>
+
+     
       </div>
     </div>
   );
