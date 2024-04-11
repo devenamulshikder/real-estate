@@ -9,7 +9,7 @@ const OurAgent = () => {
         Our Agents
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
    
 
     
@@ -34,23 +34,23 @@ const OurAgent = () => {
             <MdOutlineStarPurple500 />
           </div>
           <div className="flex gap-1">
-            <div className="border rounded-full p-2 text-[#38b469] hover:bg-green-200">
+            <div className="border border-[#38b469] rounded-full p-2 text-[#38b469] hover:bg-green-200">
               <a href="">
                 {" "}
                 <MdOutlineEmail />
               </a>
             </div>
-            <div className="border rounded-full p-2 text-blue-900 hover:bg-blue-400">
+            <div className="border border-blue-800 rounded-full p-2 text-blue-900 hover:bg-blue-400">
               <a href="">
                 <TiSocialFacebook />
               </a>
             </div>
-            <div className="border rounded-full p-2 text-blue-500 hover:bg-blue-200">
+            <div className="border border-blue-500 rounded-full p-2 text-blue-500 hover:bg-blue-200">
               <a href="">
                 <CiTwitter />
               </a>
             </div>
-            <div className="border rounded-full p-2 text-orange-700 hover:bg-orange-200">
+            <div className="border border-orange-700 rounded-full p-2 text-orange-700 hover:bg-orange-200">
               <a href="">
                 <TiSocialGooglePlus />
               </a>
@@ -67,7 +67,7 @@ const OurAgent = () => {
               alt=""
             />
           </div>
-          <div className="lg:text-lg">John Smith</div>
+          <div className="lg:text-lg">Jane Smith</div>
           <div className=" text-orange-400 flex gap-1">
             {/* rating */}
             <MdOutlineStarPurple500 />
@@ -77,23 +77,23 @@ const OurAgent = () => {
             <MdOutlineStarPurple500 />
           </div>
           <div className="flex gap-1">
-            <div className="border rounded-full p-2 text-[#38b469] hover:bg-green-200">
+            <div className="border  border-[#38b469] rounded-full p-2 text-[#38b469] hover:bg-green-200">
               <a href="">
                 {" "}
                 <MdOutlineEmail />
               </a>
             </div>
-            <div className="border rounded-full p-2 text-blue-900 hover:bg-blue-400">
+            <div className="border border-blue-800 rounded-full p-2 text-blue-900 hover:bg-blue-400">
               <a href="">
                 <TiSocialFacebook />
               </a>
             </div>
-            <div className="border rounded-full p-2 text-blue-500 hover:bg-blue-200">
+            <div className="border border-blue-500 rounded-full p-2 text-blue-500 hover:bg-blue-200">
               <a href="">
                 <CiTwitter />
               </a>
             </div>
-            <div className="border rounded-full p-2 text-orange-700 hover:bg-orange-200">
+            <div className="border border-orange-700 rounded-full p-2 text-orange-700 hover:bg-orange-200">
               <a href="">
                 <TiSocialGooglePlus />
               </a>
@@ -110,7 +110,7 @@ const OurAgent = () => {
               alt=""
             />
           </div>
-          <div className="lg:text-lg">John Smith</div>
+          <div className="lg:text-lg">Rust Cohle</div>
           <div className=" text-orange-400 flex gap-1">
             {/* rating */}
             <MdOutlineStarPurple500 />
@@ -120,23 +120,23 @@ const OurAgent = () => {
             <MdOutlineStarPurple500 />
           </div>
           <div className="flex gap-1">
-            <div className="border rounded-full p-2 text-[#38b469] hover:bg-green-200">
+            <div className="border  border-[#38b469] rounded-full p-2 text-[#38b469] hover:bg-green-200">
               <a href="">
                 {" "}
                 <MdOutlineEmail />
               </a>
             </div>
-            <div className="border rounded-full p-2 text-blue-900 hover:bg-blue-400">
+            <div className="border border-blue-800 rounded-full p-2 text-blue-900 hover:bg-blue-400">
               <a href="">
                 <TiSocialFacebook />
               </a>
             </div>
-            <div className="border rounded-full p-2 text-blue-500 hover:bg-blue-200">
+            <div className="border border-blue-500 rounded-full p-2 text-blue-500 hover:bg-blue-200">
               <a href="">
                 <CiTwitter />
               </a>
             </div>
-            <div className="border rounded-full p-2 text-orange-700 hover:bg-orange-200">
+            <div className="border border-orange-700 rounded-full p-2 text-orange-700 hover:bg-orange-200">
               <a href="">
                 <TiSocialGooglePlus />
               </a>
@@ -153,7 +153,7 @@ const OurAgent = () => {
               alt=""
             />
           </div>
-          <div className="lg:text-lg">John Smith</div>
+          <div className="lg:text-lg">Antony Iglesias</div>
           <div className=" text-orange-400 flex gap-1">
             {/* rating */}
             <MdOutlineStarPurple500 />
@@ -163,23 +163,23 @@ const OurAgent = () => {
             <MdOutlineStarPurple500 />
           </div>
           <div className="flex gap-1">
-            <div className="border rounded-full p-2 text-[#38b469] hover:bg-green-200">
+            <div className="border  border-[#38b469] rounded-full p-2 text-[#38b469] hover:bg-green-200">
               <a href="">
                 {" "}
                 <MdOutlineEmail />
               </a>
             </div>
-            <div className="border rounded-full p-2 text-blue-900 hover:bg-blue-400">
+            <div className="border border-blue-800 rounded-full p-2 text-blue-900 hover:bg-blue-400">
               <a href="">
                 <TiSocialFacebook />
               </a>
             </div>
-            <div className="border rounded-full p-2 text-blue-500 hover:bg-blue-200">
+            <div className="border border-blue-500 rounded-full p-2 text-blue-500 hover:bg-blue-200">
               <a href="">
                 <CiTwitter />
               </a>
             </div>
-            <div className="border rounded-full p-2 text-orange-700 hover:bg-orange-200">
+            <div className="border border-orange-700 rounded-full p-2 text-orange-700 hover:bg-orange-200">
               <a href="">
                 <TiSocialGooglePlus />
               </a>

@@ -4,6 +4,7 @@ import Banner from "../components/Banner";
 import Estate from "../components/Estate";
 import OurService from "../components/OurService";
 import OurAgent from "../components/OurAgent";
+import Testimonials from "../components/Testimonials";
 
 const Home = () => {
   const data = useLoaderData();
@@ -25,6 +26,7 @@ const Home = () => {
         </div>
       </div>
       <OurAgent/>
+      <Testimonials/>
     </div>
   );
 };
