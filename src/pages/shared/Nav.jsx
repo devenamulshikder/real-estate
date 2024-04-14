@@ -4,15 +4,14 @@ const Nav = () => {
   const navLinks = (
     <>
       <li>
-       <NavLink to='/'>Home</NavLink>
+        <NavLink to="/">Home</NavLink>
       </li>
       <li>
-      <NavLink to='/login'>Login</NavLink>
+        <NavLink to="/login">Login</NavLink>
       </li>
       <li>
-      <NavLink to='/signup'>Sign up</NavLink>
+        <NavLink to="/signup">Sign up</NavLink>
       </li>
-
     </>
   );
   return (
@@ -43,14 +42,21 @@ const Nav = () => {
               {navLinks}
             </ul>
           </div>
-          <a className="btn btn-ghost text-md md:text-xl lg:text-3xl font-bold">Dream <span className="text-[#38b469]">Sites</span></a>
+          <a className="btn btn-ghost text-md md:text-xl lg:text-3xl font-bold">
+            Dream <span className="text-[#38b469]">Sites</span>
+          </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>
         </div>
         <div className="navbar-end space-x-4 font-semibold">
- 
-          <Link className="btn">List a Property </Link>
+          <Link to='/register' className="btn">Register</Link>
+
+          <img
+            className="w-10 rounded-full"
+            alt="Tailwind CSS Navbar component"
+            src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+          />
         </div>
       </div>
     </>

@@ -4,7 +4,7 @@ import { MdOutlineEmail } from "react-icons/md";
 import { TiSocialFacebook, TiSocialGooglePlus } from "react-icons/ti";
 const Footer = () => {
   return (
-    <footer className="p-10 bg-base-200 text-base-content mt-16">
+    <footer className=" p-5 lg:p-10 bg-base-200 text-base-content mt-16">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 footer">
         <nav>
           <h6 className="footer-title">Company</h6>
