@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import {
+  GithubAuthProvider,
   GoogleAuthProvider,
     createUserWithEmailAndPassword,
     getAuth,
@@ -29,10 +30,19 @@ import {
 
     const googleProvider = new GoogleAuthProvider();
 
+    const githubProvider = new GithubAuthProvider()
+
     const googleLogIn = ()=>{
       setLoading(true);
       return signInWithPopup(auth, googleProvider)
     }
+
+    const githubLogIn = ()=>{
+      setLoading(true);
+      return signInWithPopup(auth, githubProvider)
+    }
+
+
   
     const logIn = (email, password)=>{
       setLoading(true)
@@ -62,6 +72,7 @@ import {
       createUser,
       logIn,
       googleLogIn,
+      githubLogIn,
       logOut
     };
     return (

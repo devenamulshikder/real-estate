@@ -1,7 +1,9 @@
 /* eslint-disable no-unused-vars */
+
+import { Link } from "react-router-dom";
+
 /* eslint-disable react/prop-types */
 const Estate = ({ data }) => {
-  console.log(data);
 
   const {
     image,
@@ -66,9 +68,11 @@ const Estate = ({ data }) => {
         </div>
       </div>
       <div className="flex flex-wrap items-center justify-center gap-6 text-sm md:text-base">
-        <button className="rounded-lg bg-[#38b469] px-4 py-2 font-sans font-semibold text-white duration-300 hover:scale-105 hover:bg-[#1b522f]">
-          View Property
-        </button>
+        <Link to={`/${id}`}>
+          <button className="rounded-lg bg-[#38b469] px-4 py-2 font-sans font-semibold text-white duration-300 hover:scale-105 hover:bg-[#1b522f]">
+            View Property
+          </button>
+        </Link>
       </div>
     </div>
   );

@@ -5,12 +5,18 @@ import Estate from "../components/Estate";
 import OurService from "../components/OurService";
 import OurAgent from "../components/OurAgent";
 import Testimonials from "../components/Testimonials";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const data = useLoaderData();
   //   console.log(data);
   return (
     <div className="">
+      <Helmet>
+        <title>
+          Dream sites
+        </title>
+      </Helmet>
       <Banner />
       <OurService />
 

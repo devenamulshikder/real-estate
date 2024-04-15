@@ -1,6 +1,19 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../provider/Authprovider";
+import { toast } from "react-toastify";
 
 const Nav = () => {
+  const { user, logOut } = useContext(AuthContext);
+  const handleLogOut = ()=>{
+    logOut()
+    .then(()=>{
+      toast('Log out successfully')
+    })
+    .catch(error=>{
+      console.error(error);
+    })
+  }
   const navLinks = (
     <>
       <li>
@@ -8,9 +21,6 @@ const Nav = () => {
       </li>
       <li>
         <NavLink to="/login">Login</NavLink>
-      </li>
-      <li>
-        <NavLink to="/signup">Sign up</NavLink>
       </li>
     </>
   );
@@ -50,13 +60,20 @@ const Nav = () => {
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>
         </div>
         <div className="navbar-end space-x-4 font-semibold">
-          <Link to='/register' className="btn">Register</Link>
-
-          <img
-            className="w-10 rounded-full"
-            alt="Tailwind CSS Navbar component"
-            src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-          />
+          {user ? (
+            <div className="flex gap-2 items-center">
+              <button onClick={handleLogOut} className="btn btn-ghost">Log Out</button>
+              <img
+                className="w-10 rounded-full"
+                alt="user img"
+                src={user.photoURL}
+              />
+            </div>
+          ) : (
+            <Link to="/register" className="btn">
+              Register
+            </Link>
+          )}
         </div>
       </div>
     </>
