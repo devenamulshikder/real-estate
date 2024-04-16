@@ -6,6 +6,8 @@ import Error from "../pages/Error";
 import Register from "../pages/Register";
 import PropertyDetails from "../components/PropertyDetails";
 import PrivetRout from "./PrivetRout";
+import ContactUs from "../components/ContactUs";
+import Profile from "../components/Profile";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +37,14 @@ const router = createBrowserRouter([
         ),
         loader: () => fetch("/fake.json"),
       },
+      {
+        path:'/contactus',
+        element:<ContactUs/>
+      },
+      {
+        path:'/profile',
+        element:<Profile/>
+      }
     ],
   },
 ]);

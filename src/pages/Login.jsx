@@ -8,10 +8,18 @@ import { toast } from "react-toastify";
 import { Helmet } from "react-helmet-async";
 
 const Login = () => {
-  const { logIn, error, setError, googleLogIn, githubLogIn } = useContext(AuthContext);
+  const { logIn, error, setError, googleLogIn, githubLogIn, loading } =
+    useContext(AuthContext);
 
-  const location = useLocation()
-  const navigate = useNavigate()
+  const location = useLocation();
+  const navigate = useNavigate();
+  if (loading) {
+    return (
+      <div className="text-center">
+        <span className="loading loading-dots loading-lg"></span>
+      </div>
+    );
+  }
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -21,8 +29,8 @@ const Login = () => {
 
     logIn(email, password)
       .then(() => {
-        toast('Login Successfully!')
-        navigate(location?.state?location.state:'/')
+        toast("Login Successfully!");
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => setError(error.message));
   };
@@ -30,30 +38,27 @@ const Login = () => {
   const handleGoogleLonIn = () => {
     setError(null);
     googleLogIn()
-    .then(() => {
-      toast('Google Login Successfully!')
-      navigate(location?.state?location.state:'/')
-    })
+      .then(() => {
+        toast("Google Login Successfully!");
+        navigate(location?.state ? location.state : "/");
+      })
       .catch((error) => setError(error.message));
   };
 
   const handleGithubLonIn = () => {
-
     setError(null);
     githubLogIn()
-    .then(() => {
-      toast('Github Login Successfully!')
-      navigate(location?.state?location.state:'/')
-    })
+      .then(() => {
+        toast("Github Login Successfully!");
+        navigate(location?.state ? location.state : "/");
+      })
       .catch((error) => setError(error.message));
   };
 
   return (
-    <div className="w-full lg:mt-32 mx-auto lg:w-[1000px] shadow-lg bg-white flex group text-gray-600">
+    <div data-aos='fade-down' data-aos-duration='1200' className="w-full lg:mt-32 mx-auto lg:w-[1000px] shadow-lg bg-white flex group text-gray-600">
       <Helmet>
-        <title>
-          Dream sites || Login
-        </title>
+        <title>Dream sites || Login</title>
       </Helmet>
       <div className="w-1/2 min-h-full bg-[#38b469] relative overflow-hidden hidden lg:block">
         <h1 className="text-white text-2xl absolute bottom-3 right-3 text-right">
@@ -120,7 +125,8 @@ const Login = () => {
           >
             <FaGoogle size={30} />
           </button>
-          <button onClick={handleGithubLonIn}
+          <button
+            onClick={handleGithubLonIn}
             aria-label="Log in with Twitter"
             className="p-3 rounded-full hover:bg-gray-200"
           >
@@ -129,7 +135,7 @@ const Login = () => {
         </div>
 
         <p className="">
-          Please Create a Accouont?{" "}
+          Do not have an Accouont?{" "}
           <Link
             className="underline font-semibold hover:text-[#38b469]"
             to="/register"

@@ -4,8 +4,8 @@ import { CiTwitter } from "react-icons/ci";
 
 const OurAgent = () => {
   return (
-    <div>
-      <h1 className="text-xl md:text-2xl my-4 md:my-8 text-center lg:text-4xl lg:my-16">
+    <div >
+      <h1 data-aos='fade-down' data-aos-duration='2000' className="text-xl md:text-2xl my-4 md:my-8 text-center lg:text-4xl lg:my-16">
         Our Agents
       </h1>
 
@@ -14,7 +14,7 @@ const OurAgent = () => {
 
     
 
-        <div className=" flex flex-col justify-center items-center gap-2">
+        <div data-aos='fade-right' data-aos-duration='2000' className=" flex flex-col justify-center items-center gap-2">
           {/* image */}
 
           <div>
@@ -57,7 +57,7 @@ const OurAgent = () => {
             </div>
           </div>
         </div>
-        <div className=" flex flex-col justify-center items-center gap-2">
+        <div data-aos='fade-right' data-aos-duration='2000' className=" flex flex-col justify-center items-center gap-2">
           {/* image */}
 
           <div>
@@ -100,7 +100,7 @@ const OurAgent = () => {
             </div>
           </div>
         </div>
-        <div className=" flex flex-col justify-center items-center gap-2">
+        <div data-aos='fade-left' data-aos-duration='2000' className=" flex flex-col justify-center items-center gap-2">
           {/* image */}
 
           <div>
@@ -143,7 +143,7 @@ const OurAgent = () => {
             </div>
           </div>
         </div>
-        <div className=" flex flex-col justify-center items-center gap-2">
+        <div data-aos='fade-left' data-aos-duration='2000' className=" flex flex-col justify-center items-center gap-2">
           {/* image */}
 
           <div>

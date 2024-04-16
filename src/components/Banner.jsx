@@ -14,7 +14,7 @@ const Banner = () => {
         autoplay={{ delay: 3000 }}
       >
         <SwiperSlide>
-          <div
+          <div data-aos='fade-up' data-aos-duration='2000'
             className="hero w-full lg:h-[700px] rounded-xl"
             style={{
               backgroundImage:

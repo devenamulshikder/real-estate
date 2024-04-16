@@ -7,9 +7,10 @@ import OurAgent from "../components/OurAgent";
 import Testimonials from "../components/Testimonials";
 import { Helmet } from "react-helmet-async";
 
+
 const Home = () => {
   const data = useLoaderData();
-  //   console.log(data);
+ 
   return (
     <div className="">
       <Helmet>
@@ -20,7 +21,7 @@ const Home = () => {
       <Banner />
       <OurService />
 
-      <div>
+      <div data-aos='fade-right' data-aos-duration='2000'>
         <h1 className="text-xl md:text-2xl my-4 md:my-8 text-center lg:text-4xl lg:my-16">
           Latest Property
         </h1>

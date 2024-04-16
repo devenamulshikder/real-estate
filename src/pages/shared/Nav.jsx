@@ -5,28 +5,90 @@ import { toast } from "react-toastify";
 
 const Nav = () => {
   const { user, logOut } = useContext(AuthContext);
-  const handleLogOut = ()=>{
+  const handleLogOut = () => {
     logOut()
-    .then(()=>{
-      toast('Log out successfully')
-    })
-    .catch(error=>{
-      console.error(error);
-    })
-  }
+      .then(() => {
+        toast("Log out successfully");
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
   const navLinks = (
     <>
       <li>
-        <NavLink to="/">Home</NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "btn btn-outline btn-success font-bold text-lg"
+              : "font-bold"
+          }
+          to="/"
+        >
+          Home
+        </NavLink>
       </li>
+{!user&&      <li>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "btn btn-outline btn-success font-bold text-lg"
+              : "font-bold"
+          }
+          to="/login"
+        >
+          Login
+        </NavLink>
+      </li>}
       <li>
-        <NavLink to="/login">Login</NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "btn btn-outline btn-success font-bold text-lg"
+              : "font-bold"
+          }
+          to="/contactus"
+        >
+          Contact Us
+        </NavLink>
       </li>
+
+      
+
+      {user && (
+        <li>
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? "btn btn-outline btn-success font-bold text-lg"
+                : "font-bold"
+            }
+            to="/profile"
+          >
+            Profile
+          </NavLink>
+        </li>
+      )}
+
+      {user && (
+        <li>
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? "btn btn-outline btn-success font-bold text-lg"
+                : "font-bold"
+            }
+            to="/updateprofile"
+          >
+            Update Profile
+          </NavLink>
+        </li>
+      )}
     </>
   );
   return (
     <>
-      <div className="navbar my-8">
+      <div data-aos="zoom-in-right" data-aos-duration='1500' className="navbar my-8">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -52,17 +114,25 @@ const Nav = () => {
               {navLinks}
             </ul>
           </div>
-          <a className="btn btn-ghost text-md md:text-xl lg:text-3xl font-bold">
-            Dream <span className="text-[#38b469]">Sites</span>
-          </a>
+          <div className="flex items-center">
+            <img className=" w-12 lg:w-16" src="/public/logo.jpeg" alt="" />
+            <a className="btn btn-ghost hidden lg:flex text-md md:text-xl lg:text-3xl font-bold">
+              Dream <span className="text-[#38b469]">Sites</span>
+            </a>
+          </div>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{navLinks}</ul>
+          <ul className="menu menu-horizontal lg:text-lg px-1">{navLinks}</ul>
         </div>
         <div className="navbar-end space-x-4 font-semibold">
           {user ? (
             <div className="flex gap-2 items-center">
-              <button onClick={handleLogOut} className="btn btn-ghost">Log Out</button>
+              <button
+                onClick={handleLogOut}
+                className="btn btn-ghost lg:text-lg"
+              >
+                Log Out
+              </button>
               <img
                 className="w-10 rounded-full"
                 alt="user img"
@@ -70,7 +140,7 @@ const Nav = () => {
               />
             </div>
           ) : (
-            <Link to="/register" className="btn">
+            <Link to="/register" className="btn text-black bg-[#38b469]">
               Register
             </Link>
           )}

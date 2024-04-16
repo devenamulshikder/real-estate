@@ -1,10 +1,18 @@
+/* eslint-disable no-unused-vars */
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../provider/Authprovider";
 import { Helmet } from "react-helmet-async";
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser, loading } = useContext(AuthContext);
+  if (loading) {
+    return (
+      <div className="text-center">
+        <span className="loading loading-dots loading-lg"></span>
+      </div>
+    );
+  }
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -14,16 +22,14 @@ const Register = () => {
     const photo = form.get("photo");
     const password = form.get("password");
     createUser(email, password)
-    .then()
-    .catch(error=>console.error(error))
+      .then()
+      .catch((error) => console.error(error));
   };
 
   return (
-    <div className="w-full max-w-md p-8 space-y-3 rounded-xl border-2 border-dotted bg-white   font-sans mx-auto my-5 lg:my-14">
+    <div data-aos='fade-down' data-aos-duration='1200' className="w-full max-w-md p-8 space-y-3 rounded-xl border-2 border-dotted bg-white   font-sans mx-auto my-5 lg:my-14">
       <Helmet>
-        <title>
-          Dream sites || Register
-        </title>
+        <title>Dream sites || Register</title>
       </Helmet>
       <h1 className="text-3xl font-bold text-center text-[#38b469]">
         Register

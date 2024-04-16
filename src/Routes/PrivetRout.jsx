@@ -5,7 +5,12 @@ import { Navigate, useLocation } from "react-router-dom";
 
 const PrivetRout = ({ children }) => {
     const location = useLocation()
-  const { user } = useContext(AuthContext);
+  const { user, loading } = useContext(AuthContext);
+
+  if (loading) {
+    return <div className="text-center"><span className="loading loading-dots loading-lg"></span></div>
+  }
+
   if (user) {
     return children;
   }
