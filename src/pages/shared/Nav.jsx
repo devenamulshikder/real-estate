@@ -92,9 +92,7 @@ const Nav = () => {
   );
   return (
     <div>
-      <div
-        className="navbar my-8"
-      >
+      <div className="navbar my-8">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -140,7 +138,7 @@ const Nav = () => {
                 Log Out
               </button>
               <img
-                className="w-12 h-12 rounded-full border"
+                className=" w-9 h-9 lg:w-12 lg:h-12 rounded-full border"
                 alt="user"
                 src={user.photoURL}
               />

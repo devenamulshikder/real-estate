@@ -1,8 +1,6 @@
 import { Helmet } from "react-helmet-async";
-import {  auth } from "../provider/Authprovider";
-import { Link} from "react-router-dom";
-
-
+import { auth } from "../provider/Authprovider";
+import { Link } from "react-router-dom";
 
 const Profile = () => {
   const user = auth.currentUser;
@@ -12,12 +10,15 @@ const Profile = () => {
   const emailVerified = user.emailVerified;
 
   return (
-    <div  className="flex justify-center items-center lg:my-28">
+    <div className="flex justify-center items-center lg:my-28">
       <Helmet>
         <title>Dream sites || profile</title>
       </Helmet>
-      <div data-aos="fade-down"
-    data-aos-duration="1200" className="flex flex-col justify-center items-center p-6 shadow-md rounded-xl sm:px-12 ">
+      <div
+        data-aos="fade-down"
+        data-aos-duration="1200"
+        className="flex flex-col justify-center items-center p-6 shadow-md rounded-xl sm:px-12 "
+      >
         <img
           src={photoURL}
           alt=""
@@ -26,7 +27,7 @@ const Profile = () => {
         <div className="space-y-4 text-center divide-y ">
           <div className="my-2 space-y-1">
             <h2 className="text-xl font-semibold sm:text-2xl">
-              Name: {displayName?displayName:'Unknown'}
+              Name: {displayName ? displayName : "Unknown"}
             </h2>
             <p className="px-5 text-xs sm:text-base font-semibold">
               Email: {email}
@@ -34,9 +35,8 @@ const Profile = () => {
             <p className="px-5 text-xs sm:text-base font-semibold">
               Verified: {emailVerified ? "Yes" : "No"}
             </p>
-            <Link to='/updateprofile'>
-              <button
-                className= "btn btn-outline btn-success font-bold text-lg mt-2">
+            <Link to="/updateprofile">
+              <button className="btn btn-outline btn-success font-bold text-lg mt-2">
                 Update Profile
               </button>
             </Link>

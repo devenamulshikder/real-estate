@@ -1,5 +1,6 @@
 import { auth } from "../provider/Authprovider";
 import { updateProfile } from "firebase/auth";
+import { Helmet } from "react-helmet-async";
 import { toast } from "react-toastify";
 
 const UpdateProfile = () => {
@@ -26,6 +27,11 @@ const UpdateProfile = () => {
       data-aos-duration="1200"
       className="p-6 text-gray-100 dark:text-gray-800 lg:my-20"
     >
+      <Helmet>
+        <title>
+          Dream sites || updateProfile
+        </title>
+      </Helmet>
       <form data-aos="fade-down"
     data-aos-duration="1200"
         onSubmit={handleUpdateProfile}

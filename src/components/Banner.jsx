@@ -27,7 +27,7 @@ const Banner = () => {
                 <h1 className="mb-5 text-xl lg:text-5xl font-bold">NOW IT'S EASY TO FIND YOUR FUTURE HOME</h1>
                 <p className="mb-5">WITH REALES - REAL ESTATE HTML TEMPLATE
                 </p>
-                <button className="text-xl w-32 h-14  bg-green-600 rounded-md text-white relative overflow-hidden group z-10 hover:text-white duration-1000"><span className="absolute bg-green-400 size-36 rounded-full group-hover:scale-100 scale-0 -z-10 -left-2 -top-10 group-hover:duration-500 duration-700 origin-center transform transition-all"></span><span className="absolute bg-green-800 size-36 -left-2 -top-10 rounded-full group-hover:scale-100 scale-0 -z-10 group-hover:duration-700 duration-500 origin-center transform transition-all"></span>Get Started</button>
+                <button className="lg:text-xl w-24 h-10  lg:w-32 lg:h-14  bg-green-600 rounded-md text-white relative overflow-hidden group z-10 hover:text-white duration-1000"><span className="absolute bg-green-400 size-36 rounded-full group-hover:scale-100 scale-0 -z-10 -left-2 -top-10 group-hover:duration-500 duration-700 origin-center transform transition-all"></span><span className="absolute bg-green-800 size-36 -left-2 -top-10 rounded-full group-hover:scale-100 scale-0 -z-10 group-hover:duration-700 duration-500 origin-center transform transition-all"></span>Get Started</button>
               </div>
             </div>
           </div>
@@ -46,7 +46,7 @@ const Banner = () => {
                 <h1 className="mb-5 text-xl lg:text-5xl font-bold">NOW IT'S EASY TO FIND YOUR FUTURE HOME</h1>
                 <p className="mb-5">WITH REALES - REAL ESTATE HTML TEMPLATE
                 </p>
-                <button className="text-xl w-32 h-14  bg-green-600 rounded-md text-white relative overflow-hidden group z-10 hover:text-white duration-1000"><span className="absolute bg-green-400 size-36 rounded-full group-hover:scale-100 scale-0 -z-10 -left-2 -top-10 group-hover:duration-500 duration-700 origin-center transform transition-all"></span><span className="absolute bg-green-800 size-36 -left-2 -top-10 rounded-full group-hover:scale-100 scale-0 -z-10 group-hover:duration-700 duration-500 origin-center transform transition-all"></span>Get Started</button>
+                <button className="lg:text-xl w-24 h-10  lg:w-32 lg:h-14  bg-green-600 rounded-md text-white relative overflow-hidden group z-10 hover:text-white duration-1000"><span className="absolute bg-green-400 size-36 rounded-full group-hover:scale-100 scale-0 -z-10 -left-2 -top-10 group-hover:duration-500 duration-700 origin-center transform transition-all"></span><span className="absolute bg-green-800 size-36 -left-2 -top-10 rounded-full group-hover:scale-100 scale-0 -z-10 group-hover:duration-700 duration-500 origin-center transform transition-all"></span>Get Started</button>
               </div>
             </div>
           </div>
@@ -67,23 +67,12 @@ const Banner = () => {
                 <p className="mb-5">
                 WITH REALES - REAL ESTATE HTML TEMPLATE
                 </p>
-                <button className="text-xl w-32 h-14  bg-green-600 rounded-md text-white relative overflow-hidden group z-10 hover:text-white duration-1000"><span className="absolute bg-green-400 size-36 rounded-full group-hover:scale-100 scale-0 -z-10 -left-2 -top-10 group-hover:duration-500 duration-700 origin-center transform transition-all"></span><span className="absolute bg-green-800 size-36 -left-2 -top-10 rounded-full group-hover:scale-100 scale-0 -z-10 group-hover:duration-700 duration-500 origin-center transform transition-all"></span>Get Started</button>
+                <button className="lg:text-xl w-24 h-10  lg:w-32 lg:h-14  bg-green-600 rounded-md text-white relative overflow-hidden group z-10 hover:text-white duration-1000"><span className="absolute bg-green-400 size-36 rounded-full group-hover:scale-100 scale-0 -z-10 -left-2 -top-10 group-hover:duration-500 duration-700 origin-center transform transition-all"></span><span className="absolute bg-green-800 size-36 -left-2 -top-10 rounded-full group-hover:scale-100 scale-0 -z-10 group-hover:duration-700 duration-500 origin-center transform transition-all"></span>Get Started</button>
               </div>
             </div>
           </div>
         </SwiperSlide>
       </Swiper>
-      {/* <div className=" absolute top-[35%] lg:top-1/2 z-10 right-6 md:right-28 lg:right-60 bg-gray-100 p-4 bg-opacity-50 rounded-md">
-        <h2 className=" text-sm md:text-2xl lg:text-4xl font-bold text-pink-500">
-          NOW IT'S EASY TO FIND YOUR FUTURE HOME
-        </h2>
-        <p className="text-center text-black font-semibold text-xs md:text-sm lg:mt-4 lg:text-lg">
-          WITH REALES - REAL ESTATE HTML TEMPLATE
-        </p>
-        <div className="flex justify-center mt-2">
-          <button className="btn btn-success">Learn More</button>
-        </div>
-      </div> */}
     </div>
   );
 };
