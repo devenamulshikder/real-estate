@@ -7,13 +7,17 @@ const PrivetRout = ({ children }) => {
     const location = useLocation()
   const { user, loading } = useContext(AuthContext);
 
-  if (loading) {
-    return <div className="text-center"><span className="loading loading-dots loading-lg"></span></div>
-  }
-
-  if (user) {
+  if (user?.email) {
     return children;
   }
+
+  if (loading) {
+    return <div className="text-center">
+              <span className="loading loading-dots loading-lg"></span>
+        </div>
+  }
+
+  
   return <Navigate state={location.pathname} to="/login"></Navigate>;
 };
 

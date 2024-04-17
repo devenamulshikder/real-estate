@@ -4,82 +4,84 @@
 import {
   GithubAuthProvider,
   GoogleAuthProvider,
-    createUserWithEmailAndPassword,
-    getAuth,
-    onAuthStateChanged,
-    signInWithEmailAndPassword,
-    signInWithPopup,
-    signOut,
-  } from "firebase/auth";
-  import { createContext, useEffect, useState } from "react";
-  import app from "../firebase/firebase.config";
-  export const AuthContext = createContext(null);
-  
-  export const auth = getAuth(app);
-  
-  const AuthProvider = ({ children }) => {
-    const [user, setUser] = useState(null);
-  
-    const [loading, setLoading] = useState(true);
+  createUserWithEmailAndPassword,
+  getAuth,
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  signOut,
+} from "firebase/auth";
+import { createContext, useEffect, useState } from "react";
+import app from "../firebase/firebase.config";
+export const AuthContext = createContext(null);
 
-    const [error, setError]= useState(null);
-  
-    const createUser = (email, password) => {
-      setLoading(true)
-      return createUserWithEmailAndPassword(auth, email, password);
-    };
+export const auth = getAuth(app);
 
-    const googleProvider = new GoogleAuthProvider();
+const AuthProvider = ({ children }) => {
+  const [user, setUser] = useState(null);
 
-    const githubProvider = new GithubAuthProvider()
+  const [loading, setLoading] = useState(true);
 
-    const googleLogIn = ()=>{
-      setLoading(true);
-      return signInWithPopup(auth, googleProvider)
-    }
+  const [error, setError] = useState(null);
 
-    const githubLogIn = ()=>{
-      setLoading(true);
-      return signInWithPopup(auth, githubProvider)
-    }
+  const [showPassword, setShowPassword] = useState(false);
 
-
-  
-    const logIn = (email, password)=>{
-      setLoading(true)
-      return signInWithEmailAndPassword(auth, email, password)
-    }
-  
-    const logOut = ()=>{
-      setLoading(true)
-      return signOut(auth);
-    }
-  
-    useEffect(() => {
-      const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
-        setUser(currentUser);
-        setLoading(false)
-      });
-      return () => {
-        unSubscribe()
-      };
-    }, []);
-  
-    const authInfo = {
-      user,
-      loading,
-      error, 
-      setError,
-      createUser,
-      logIn,
-      googleLogIn,
-      githubLogIn,
-      logOut
-    };
-    return (
-      <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
-    );
+  const createUser = (email, password) => {
+    setLoading(true);
+    return createUserWithEmailAndPassword(auth, email, password);
   };
-  
-  export default AuthProvider;
-  
+
+  const googleProvider = new GoogleAuthProvider();
+
+  const githubProvider = new GithubAuthProvider();
+
+  const googleLogIn = () => {
+    setLoading(true);
+    return signInWithPopup(auth, googleProvider);
+  };
+
+  const githubLogIn = () => {
+    setLoading(true);
+    return signInWithPopup(auth, githubProvider);
+  };
+
+  const logIn = (email, password) => {
+    setLoading(true);
+    return signInWithEmailAndPassword(auth, email, password);
+  };
+
+  const logOut = () => {
+    setLoading(true);
+    return signOut(auth);
+  };
+
+  useEffect(() => {
+    const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setLoading(false);
+      setUser(currentUser);
+    });
+    return () => {
+      unSubscribe();
+    };
+  }, []);
+
+  const authInfo = {
+    user,
+    loading,
+    error,
+    showPassword,
+    setError,
+    createUser,
+    logIn,
+    googleLogIn,
+    githubLogIn,
+    logOut,
+   
+    setShowPassword,
+  };
+  return (
+    <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
+  );
+};
+
+export default AuthProvider;

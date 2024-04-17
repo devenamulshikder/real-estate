@@ -1,27 +1,23 @@
 import { Helmet } from "react-helmet-async";
-import { auth } from "../provider/Authprovider";
-import { Link, Navigate } from "react-router-dom";
+import {  auth } from "../provider/Authprovider";
+import { Link} from "react-router-dom";
+
+
 
 const Profile = () => {
   const user = auth.currentUser;
-
-  if (user === null) {
-    return <Navigate to="/"></Navigate>;
-  }
-
-  console.log(user);
-
   const displayName = user.displayName;
   const email = user.email;
   const photoURL = user.photoURL;
   const emailVerified = user.emailVerified;
 
   return (
-    <div className="flex justify-center items-center lg:my-36">
+    <div  className="flex justify-center items-center lg:my-28">
       <Helmet>
         <title>Dream sites || profile</title>
       </Helmet>
-      <div className="flex flex-col justify-center items-center p-6 shadow-md rounded-xl sm:px-12 ">
+      <div data-aos="fade-down"
+    data-aos-duration="1200" className="flex flex-col justify-center items-center p-6 shadow-md rounded-xl sm:px-12 ">
         <img
           src={photoURL}
           alt=""
@@ -30,7 +26,7 @@ const Profile = () => {
         <div className="space-y-4 text-center divide-y ">
           <div className="my-2 space-y-1">
             <h2 className="text-xl font-semibold sm:text-2xl">
-              Name: {displayName}
+              Name: {displayName?displayName:'Unknown'}
             </h2>
             <p className="px-5 text-xs sm:text-base font-semibold">
               Email: {email}

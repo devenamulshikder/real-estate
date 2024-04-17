@@ -1,14 +1,18 @@
 import { useContext } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/Authprovider";
 import { toast } from "react-toastify";
 
 const Nav = () => {
   const { user, logOut } = useContext(AuthContext);
+
+  const navigate = useNavigate();
+
   const handleLogOut = () => {
     logOut()
       .then(() => {
         toast("Log out successfully");
+        navigate("/");
       })
       .catch((error) => {
         console.error(error);
@@ -28,32 +32,20 @@ const Nav = () => {
           Home
         </NavLink>
       </li>
-{!user&&      <li>
-        <NavLink
-          className={({ isActive }) =>
-            isActive
-              ? "btn btn-outline btn-success font-bold text-lg"
-              : "font-bold"
-          }
-          to="/login"
-        >
-          Login
-        </NavLink>
-      </li>}
-      <li>
-        <NavLink
-          className={({ isActive }) =>
-            isActive
-              ? "btn btn-outline btn-success font-bold text-lg"
-              : "font-bold"
-          }
-          to="/contactus"
-        >
-          Contact Us
-        </NavLink>
-      </li>
-
-      
+      {!user && (
+        <li>
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? "btn btn-outline btn-success font-bold text-lg"
+                : "font-bold"
+            }
+            to="/login"
+          >
+            Login
+          </NavLink>
+        </li>
+      )}
 
       {user && (
         <li>
@@ -84,11 +76,25 @@ const Nav = () => {
           </NavLink>
         </li>
       )}
+      <li>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "btn btn-outline btn-success font-bold text-lg"
+              : "font-bold"
+          }
+          to="/contactus"
+        >
+          Contact Us
+        </NavLink>
+      </li>
     </>
   );
   return (
-    <>
-      <div data-aos="zoom-in-right" data-aos-duration='1500' className="navbar my-8">
+    <div>
+      <div
+        className="navbar my-8"
+      >
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -134,8 +140,8 @@ const Nav = () => {
                 Log Out
               </button>
               <img
-                className="w-10 rounded-full"
-                alt="user img"
+                className="w-12 h-12 rounded-full border"
+                alt="user"
                 src={user.photoURL}
               />
             </div>
@@ -146,7 +152,7 @@ const Nav = () => {
           )}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

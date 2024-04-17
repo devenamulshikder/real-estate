@@ -1,19 +1,38 @@
+import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
+import { AuthContext } from "../provider/Authprovider";
+import { useForm } from "react-hook-form";
 
 /* eslint-disable react/no-unescaped-entities */
 const ContactUs = () => {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data) => console.log(data);
+
+  console.log(watch("example"));
+
+  const { loading } = useContext(AuthContext);
+  if (loading) {
+    return (
+      <div className="text-center">
+        <span className="loading loading-dots loading-lg"></span>
+      </div>
+    );
+  }
   return (
     <section
-    
       data-aos="fade-down"
       data-aos-duration="1200"
       className="py-6 bg-gray-800 dark:bg-gray-100 text-gray-50 dark:text-gray-900 lg:mt-20 rounded-xl"
     >
       <Helmet>
-            <title>
-                Dream sites || contact us
-            </title>
-        </Helmet>
+        <title>Dream sites || contact us</title>
+      </Helmet>
       <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
         <div className="py-6 md:py-0 md:px-6">
           <h1 className="text-4xl font-bold">Get in touch</h1>
@@ -59,39 +78,30 @@ const ContactUs = () => {
             </p>
           </div>
         </div>
-        <div
-          noValidate=""
-          className="flex flex-col py-6 space-y-6 md:py-0 md:px-6"
-        >
-          <label className="block">
-            <span className="mb-1">Full name</span>
+        <div className="p-4">
+          <form onSubmit={handleSubmit(onSubmit)}>
             <input
-              type="text"
-              placeholder="Leroy Jenkins"
-              className="block w-full border p-2 rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-[#38b469] focus:dark:ring-[#38b469] bg-gray-800 dark:bg-gray-100"
+              placeholder="Enter Email"
+              className="w-full mb-5 p-3 rounded-sm"
+              {...register("email", { required: true })}
             />
-          </label>
-          <label className="block">
-            <span className="mb-1">Email address</span>
+            {errors.email && <span className="relative text-red-500 -top-5">This field is required</span>}
+            <br />
             <input
-              type="email"
-              placeholder="leroy@jenkins.com"
-              className="block border p-2 w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-[#38b469] focus:dark:ring-[#38b469] bg-gray-800 dark:bg-gray-100"
+              placeholder="Password"
+              className="w-full mb-5 p-3 rounded-sm"
+              {...register("password", { required: true })}
             />
-          </label>
-          <label className="block">
-            <span className="mb-1">Message</span>
+            {errors.password && <span className="relative text-red-500 -top-5">This field is required</span>}
+            <br />
             <textarea
-              rows="3"
-              className="block w-full border rounded-md focus:ring focus:ring-opacity-75 focus:ring-[#38b469] focus:dark:ring-[#38b469] bg-gray-800 dark:bg-gray-100"
-            ></textarea>
-          </label>
-          <button
-            type="button"
-            className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 bg-[#38b469] dark:bg-[#38b469] text-gray-900 dark:text-gray-50 focus:ring-[#38b469] focus:dark:ring-[#38b469] hover:ring-[#38b469] hover:dark:ring-[#38b469]"
-          >
-            Submit
-          </button>
+              placeholder="Message write here..."
+              className="w-full h-36 p-3 rounded-sm "
+              {...register("message", { required: true })}
+            />
+            {errors.message && <span className="relative text-red-500 -top-1">This field is required</span>} <br />
+            <button className="btn btn-ghost mt-4 bg-[#38b469]">Submit</button>
+          </form>
         </div>
       </div>
     </section>

@@ -19,7 +19,7 @@ const Estate = ({ data }) => {
   } = data;
 
   return (
-    <div  data-aos="fade-right" data-aos-duration='2000' className="  mx-auto my-8 max-w-[350px] space-y-6 rounded-xl bg-white px-4 pb-8 pt-4  shadow-lg ">
+    <div  data-aos="fade-up" data-aos-duration='2000' className="  mx-auto my-8 max-w-[350px] space-y-6 rounded-xl bg-white px-4 pb-8 pt-4  shadow-lg ">
       <div className="relative flex h-48 w-full justify-center lg:h-[280px]">
         <div className="absolute left-4 right-4 top-4 flex items-center justify-between">
           

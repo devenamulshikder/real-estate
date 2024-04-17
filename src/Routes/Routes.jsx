@@ -8,6 +8,7 @@ import PropertyDetails from "../components/PropertyDetails";
 import PrivetRout from "./PrivetRout";
 import ContactUs from "../components/ContactUs";
 import Profile from "../components/Profile";
+import UpdateProfile from "../components/UpdateProfile";
 
 const router = createBrowserRouter([
   {
@@ -38,13 +39,25 @@ const router = createBrowserRouter([
         loader: () => fetch("/fake.json"),
       },
       {
-        path:'/contactus',
-        element:<ContactUs/>
+        path: "/profile",
+        element: (
+          <PrivetRout>
+            <Profile />
+          </PrivetRout>
+        ),
       },
       {
-        path:'/profile',
-        element:<Profile/>
-      }
+        path: "/updateprofile",
+        element: (
+          <PrivetRout>
+            <UpdateProfile />
+          </PrivetRout>
+        ),
+      },
+      {
+        path: "/contactus",
+        element: <ContactUs />,
+      },
     ],
   },
 ]);

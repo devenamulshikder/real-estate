@@ -3,23 +3,25 @@
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/Authprovider";
-import { FaGithub, FaGoogle } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaGithub, FaGoogle } from "react-icons/fa";
 import { toast } from "react-toastify";
 import { Helmet } from "react-helmet-async";
 
 const Login = () => {
-  const { logIn, error, setError, googleLogIn, githubLogIn, loading } =
-    useContext(AuthContext);
-
+  const {
+    logIn,
+    error,
+    setError,
+    googleLogIn,
+    githubLogIn,
+    showPassword,
+    setShowPassword,
+  } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
-  if (loading) {
-    return (
-      <div className="text-center">
-        <span className="loading loading-dots loading-lg"></span>
-      </div>
-    );
-  }
+
+
+
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -32,7 +34,10 @@ const Login = () => {
         toast("Login Successfully!");
         navigate(location?.state ? location.state : "/");
       })
-      .catch((error) => setError(error.message));
+      .catch(error=>{
+        toast(`${error.message}Please Register first..!`)
+        navigate('/register')
+      })
   };
 
   const handleGoogleLonIn = () => {
@@ -56,7 +61,12 @@ const Login = () => {
   };
 
   return (
-    <div data-aos='fade-down' data-aos-duration='1200' className="w-full lg:mt-32 mx-auto lg:w-[1000px] shadow-lg bg-white flex group text-gray-600">
+    <div>
+      <div
+      data-aos="fade-down"
+      data-aos-duration="1200"
+      className="w-full lg:mt-32 mx-auto lg:w-[1000px] shadow-lg bg-white flex group text-gray-600"
+    >
       <Helmet>
         <title>Dream sites || Login</title>
       </Helmet>
@@ -71,26 +81,37 @@ const Login = () => {
       <form onSubmit={handleLogin} className="p-8 flex-1">
         <h1 className="text-4xl pb-4">Login</h1>
         <div className="space-y-5">
-          <label htmlFor="email_" className="block">
-            Email
-          </label>
-          <input
-            type="email"
-            name="email"
-            required
-            placeholder="example@example.com"
-            className="p-3 block w-full shadow-lg outline-none border-2 rounded-md border-dashed  invalid:border-red-700 valid:border-[#38b469]"
-          />
-          <label htmlFor="password_" className="block">
-            Password
-          </label>
-          <input
-            type="password"
-            name="password"
-            placeholder=".............."
-            min={5}
-            className="p-3 block w-full shadow-lg outline-none border-2 rounded-md border-dashed invalid:border-red-700 valid:border-[#38b469]"
-          />
+          <div>
+            <label htmlFor="email_" className="block">
+              Email
+            </label>
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="example@example.com"
+              className="p-3 block w-full shadow-lg outline-none border-2 rounded-md border-dashed  invalid:border-red-700 valid:border-[#38b469]"
+            />
+          </div>
+          <div className="relative ">
+            <label htmlFor="password_" className="block">
+              Password
+            </label>
+            <input
+              type={showPassword ? "text" : "password"}
+              name="password"
+              placeholder=".............."
+              required
+              min={5}
+              className="p-3 block w-full shadow-lg outline-none border-2 rounded-md border-dashed invalid:border-red-700 valid:border-[#38b469]"
+            />
+            <span
+              className=" absolute right-3 bottom-4"
+              onClick={() => setShowPassword(!showPassword)}
+            >
+              {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
+            </span>
+          </div>
         </div>
         <div className="flex justify-end text-xs ">
           <a href="#" className="hover:underline">
@@ -144,6 +165,7 @@ const Login = () => {
           </Link>
         </p>
       </form>
+    </div>
     </div>
   );
 };

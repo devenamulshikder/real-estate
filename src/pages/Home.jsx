@@ -15,13 +15,13 @@ const Home = () => {
     <div className="">
       <Helmet>
         <title>
-          Dream sites
+          Dream sites || home
         </title>
       </Helmet>
       <Banner />
       <OurService />
 
-      <div data-aos='fade-right' data-aos-duration='2000'>
+      <div data-aos='fade-up' data-aos-duration='2000'>
         <h1 className="text-xl md:text-2xl my-4 md:my-8 text-center lg:text-4xl lg:my-16">
           Latest Property
         </h1>
