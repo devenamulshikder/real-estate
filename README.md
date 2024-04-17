@@ -1,6 +1,6 @@
 # Dream Sites
 # Live Link: 
-- [Vacay-Vibes](https://vacay-vibes.web.app/)
+- [Dream-Sites](https://assignment-9-real-estate-c65a0.web.app/)
 
 # Facilities of the Websites: 
 - Smooth Animation Experience: Elevate user interaction with smooth animations throughout the website, enhancing the overall browsing experience and providing a visually appealing interface.
@@ -25,4 +25,5 @@
 - [Swiper-Slider](https://swiperjs.com/)
 - [Firebase-Auth](https://firebase.com/)
 - [Google-font](https://fonts.google.com/)
+- [React-Hook-Form](https://react-hook-form.com/)
 
